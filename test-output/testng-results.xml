@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-11-24T20:03:40 IST" name="Default suite" finished-at="2026-11-24T20:03:50 IST" duration-ms="9678">
+    <groups>
+    </groups>
+    <test started-at="2026-11-24T20:03:40 IST" name="Default test" finished-at="2026-11-24T20:03:50 IST" duration-ms="9678">
+      <class name="seleniumscripts.SwaglabsValidLogin">
+        <test-method signature="SwagValiLogin()[pri:0, instance:seleniumscripts.SwaglabsValidLogin@5c30a9b0]" started-at="2026-11-24T20:03:40 IST" name="SwagValiLogin" finished-at="2026-11-24T20:03:50 IST" duration-ms="9610" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SwagValiLogin -->
+      </class> <!-- seleniumscripts.SwaglabsValidLogin -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
