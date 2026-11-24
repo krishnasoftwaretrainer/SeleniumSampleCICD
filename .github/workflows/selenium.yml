@@ -22,17 +22,16 @@ jobs:
           java-version: '17'
           cache: maven
 
-      - name: Execute Selenium Cucumber Tests
+      - name: Execute Selenium Tests
         run: mvn clean test
 
-      - name: Upload Test Reports
+      - name: Upload TestNG Reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: Selenium-Cucumber-Reports
+          name: Selenium-Reports
           path: |
             target/surefire-reports/
-            target/cucumber-reports/
-            target/site/
+            
           if-no-files-found: warn
           retention-days: 7
