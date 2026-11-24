@@ -1,0 +1,38 @@
+name: Selenium Java Cucumber Automation
+
+on:
+  push:
+    branches: [main]
+
+  pull_request:
+    branches: [main]
+
+jobs:
+  selenium-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+
+      - name: Execute Selenium Cucumber Tests
+        run: mvn clean test
+
+      - name: Upload Test Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Selenium-Cucumber-Reports
+          path: |
+            target/surefire-reports/
+            target/cucumber-reports/
+            target/site/
+          if-no-files-found: warn
+          retention-days: 7
